@@ -1,0 +1,4 @@
+// The tenant cookie can be set to _ALL_ to allow users to see all results for tenants they are a member of.
+export const SELECT_ALL = '_ALL_';
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uL3NyYy9jb25zdGFudHMudHMiXSwic291cmNlc0NvbnRlbnQiOlsiLy8gVGhlIHRlbmFudCBjb29raWUgY2FuIGJlIHNldCB0byBfQUxMXyB0byBhbGxvdyB1c2VycyB0byBzZWUgYWxsIHJlc3VsdHMgZm9yIHRlbmFudHMgdGhleSBhcmUgYSBtZW1iZXIgb2YuXG5leHBvcnQgY29uc3QgU0VMRUNUX0FMTCA9ICdfQUxMXydcbiJdLCJuYW1lcyI6WyJTRUxFQ1RfQUxMIl0sIm1hcHBpbmdzIjoiQUFBQSw0R0FBNEc7QUFDNUcsT0FBTyxNQUFNQSxhQUFhLFFBQU8ifQ==

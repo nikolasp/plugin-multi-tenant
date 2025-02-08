@@ -1,0 +1,15 @@
+export const findTenantOptions = async ({ limit, payload, tenantsCollectionSlug, useAsTitle, user })=>{
+    return payload.find({
+        collection: tenantsCollectionSlug,
+        depth: 0,
+        limit,
+        overrideAccess: false,
+        select: {
+            [useAsTitle]: true
+        },
+        sort: useAsTitle,
+        user
+    });
+};
+
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIi4uLy4uL3NyYy9xdWVyaWVzL2ZpbmRUZW5hbnRPcHRpb25zLnRzIl0sInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB0eXBlIHsgUGFnaW5hdGVkRG9jcywgUGF5bG9hZCwgVXNlciB9IGZyb20gJ3BheWxvYWQnXG5cbnR5cGUgQXJncyA9IHtcbiAgbGltaXQ6IG51bWJlclxuICBwYXlsb2FkOiBQYXlsb2FkXG4gIHRlbmFudHNDb2xsZWN0aW9uU2x1Zzogc3RyaW5nXG4gIHVzZUFzVGl0bGU6IHN0cmluZ1xuICB1c2VyPzogVXNlclxufVxuZXhwb3J0IGNvbnN0IGZpbmRUZW5hbnRPcHRpb25zID0gYXN5bmMgKHtcbiAgbGltaXQsXG4gIHBheWxvYWQsXG4gIHRlbmFudHNDb2xsZWN0aW9uU2x1ZyxcbiAgdXNlQXNUaXRsZSxcbiAgdXNlcixcbn06IEFyZ3MpOiBQcm9taXNlPFBhZ2luYXRlZERvY3M+ID0+IHtcbiAgcmV0dXJuIHBheWxvYWQuZmluZCh7XG4gICAgY29sbGVjdGlvbjogdGVuYW50c0NvbGxlY3Rpb25TbHVnLFxuICAgIGRlcHRoOiAwLFxuICAgIGxpbWl0LFxuICAgIG92ZXJyaWRlQWNjZXNzOiBmYWxzZSxcbiAgICBzZWxlY3Q6IHtcbiAgICAgIFt1c2VBc1RpdGxlXTogdHJ1ZSxcbiAgICB9LFxuICAgIHNvcnQ6IHVzZUFzVGl0bGUsXG4gICAgdXNlcixcbiAgfSlcbn1cbiJdLCJuYW1lcyI6WyJmaW5kVGVuYW50T3B0aW9ucyIsImxpbWl0IiwicGF5bG9hZCIsInRlbmFudHNDb2xsZWN0aW9uU2x1ZyIsInVzZUFzVGl0bGUiLCJ1c2VyIiwiZmluZCIsImNvbGxlY3Rpb24iLCJkZXB0aCIsIm92ZXJyaWRlQWNjZXNzIiwic2VsZWN0Iiwic29ydCJdLCJtYXBwaW5ncyI6IkFBU0EsT0FBTyxNQUFNQSxvQkFBb0IsT0FBTyxFQUN0Q0MsS0FBSyxFQUNMQyxPQUFPLEVBQ1BDLHFCQUFxQixFQUNyQkMsVUFBVSxFQUNWQyxJQUFJLEVBQ0M7SUFDTCxPQUFPSCxRQUFRSSxJQUFJLENBQUM7UUFDbEJDLFlBQVlKO1FBQ1pLLE9BQU87UUFDUFA7UUFDQVEsZ0JBQWdCO1FBQ2hCQyxRQUFRO1lBQ04sQ0FBQ04sV0FBVyxFQUFFO1FBQ2hCO1FBQ0FPLE1BQU1QO1FBQ05DO0lBQ0Y7QUFDRixFQUFDIn0=

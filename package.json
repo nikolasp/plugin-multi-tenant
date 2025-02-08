@@ -1,0 +1,86 @@
+{
+  "name": "@payloadcms/plugin-multi-tenant",
+  "version": "3.22.0",
+  "description": "Multi Tenant plugin for Payload",
+  "keywords": [
+    "payload",
+    "cms",
+    "plugin",
+    "typescript",
+    "react",
+    "multi-tenant",
+    "nextjs"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nikolasp/plugin-multi-tenant.git",
+    "directory": "packages/plugin-multi-tenant"
+  },
+  "license": "MIT",
+  "author": "Payload <dev@payloadcms.com> (https://payloadcms.com)",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "pnpm copyfiles && pnpm build:types && pnpm build:swc",
+    "build:swc": "swc ./src -d ./dist --config-file .swcrc --strip-leading-paths",
+    "build:types": "tsc --emitDeclarationOnly --outDir dist",
+    "clean": "rimraf {dist,*.tsbuildinfo}",
+    "copyfiles": "copyfiles -u 1 \"src/**/*.{html,css,scss,ttf,woff,woff2,eot,svg,jpg,png,json}\" dist/",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "pack:plugin": "pnpm prepublishOnly && pnpm copyfiles && pnpm pack",
+    "prepublishOnly": "pnpm clean && pnpm turbo build"
+  },
+  "devDependencies": {
+    "@payloadcms/eslint-config": "3.9.0",
+    "@payloadcms/ui": "3.22.0",
+    "@swc/cli": "^0.6.0",
+    "@swc/core": "1.10.15",
+    "@types/react": "19.0.7",
+    "copyfiles": "2.4.1",
+    "payload": "3.22.0",
+    "react": "19.0.0",
+    "react-dom": "19.0.0",
+    "typescript": "5.7.3"
+  },
+  "peerDependencies": {
+    "@payloadcms/ui": "3.22.0",
+    "@types/react": "19.0.7",
+    "next": "^15.0.3",
+    "payload": "3.22.0",
+    "react": "19.0.0",
+    "react-dom": "19.0.0"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts",
+      "default": "./dist/index.js"
+    },
+    "./fields": {
+      "import": "./dist/exports/fields.js",
+      "types": "./dist/exports/fields.d.ts",
+      "default": "./dist/exports/fields.js"
+    },
+    "./types": {
+      "import": "./dist/exports/types.js",
+      "types": "./dist/exports/types.d.ts",
+      "default": "./dist/exports/types.js"
+    },
+    "./rsc": {
+      "import": "./dist/exports/rsc.js",
+      "types": "./dist/exports/rsc.d.ts",
+      "default": "./dist/exports/rsc.js"
+    },
+    "./client": {
+      "import": "./dist/exports/client.js",
+      "types": "./dist/exports/client.d.ts",
+      "default": "./dist/exports/client.js"
+    },
+    "./utilities": {
+      "import": "./dist/exports/utilities.js",
+      "types": "./dist/exports/utilities.d.ts",
+      "default": "./dist/exports/utilities.js"
+    }
+  }
+}
