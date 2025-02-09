@@ -1,5 +1,6 @@
 import type { CollectionSlug, ServerProps, ViewTypes } from 'payload';
-type Args = {
+import { UserWithTenantsField } from '@/types';
+type Args = ServerProps & {
     collectionSlug: CollectionSlug;
     docID?: number | string;
     globalSlugs: string[];
@@ -7,6 +8,7 @@ type Args = {
     tenantsCollectionSlug: string;
     useAsTitle: string;
     viewType: ViewTypes;
-} & ServerProps;
+    user: UserWithTenantsField;
+};
 export declare const GlobalViewRedirect: (args: Args) => Promise<void>;
 export {};

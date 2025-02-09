@@ -1,0 +1,1 @@
+{"version":3,"file":"getCollectionIDType.js","sourceRoot":"","sources":["../../src/utilities/getCollectionIDType.ts"],"names":[],"mappings":";;;AAMO,IAAM,mBAAmB,GAAG,UAAC,EAAiC;;QAA/B,cAAc,oBAAA,EAAE,OAAO,aAAA;IAC3D,OAAO,MAAA,MAAA,OAAO,CAAC,WAAW,CAAC,cAAc,CAAC,0CAAE,YAAY,mCAAI,OAAO,CAAC,EAAE,CAAC,aAAa,CAAA;AACtF,CAAC,CAAA;AAFY,QAAA,mBAAmB,uBAE/B"}

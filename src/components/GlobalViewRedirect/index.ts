@@ -1,11 +1,12 @@
 import type { CollectionSlug, ServerProps, ViewTypes } from 'payload'
 
-import { headers as getHeaders } from 'next/headers.js'
-import { redirect } from 'next/navigation.js'
+import { headers as getHeaders } from 'next/headers'
+import { redirect } from 'next/navigation'
 
-import { getGlobalViewRedirect } from '../../utilities/getGlobalViewRedirect.js'
+import { getGlobalViewRedirect } from '../../utilities/getGlobalViewRedirect'
+import { UserWithTenantsField } from '@/types'
 
-type Args = {
+type Args = ServerProps & {
   collectionSlug: CollectionSlug
   docID?: number | string
   globalSlugs: string[]
@@ -13,7 +14,8 @@ type Args = {
   tenantsCollectionSlug: string
   useAsTitle: string
   viewType: ViewTypes
-} & ServerProps
+  user: UserWithTenantsField
+}
 
 export const GlobalViewRedirect = async (args: Args) => {
   const collectionSlug = args?.collectionSlug

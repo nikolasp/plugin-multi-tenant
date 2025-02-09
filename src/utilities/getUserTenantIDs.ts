@@ -1,6 +1,6 @@
-import type { Tenant, UserWithTenantsField } from '../types.js'
+import type { Tenant, UserWithTenantsField } from '../types'
 
-import { extractID } from './extractID.js'
+import { extractID } from './extractID'
 
 /**
  * Returns array of all tenant IDs assigned to a user
@@ -15,7 +15,7 @@ export const getUserTenantIDs = <IDType extends number | string>(
   }
 
   return (
-    user?.tenants?.reduce<IDType[]>((acc, { tenant }) => {
+    user?.skole?.reduce<IDType[]>((acc, tenant) => {
       if (tenant) {
         acc.push(extractID<IDType>(tenant as Tenant<IDType>))
       }

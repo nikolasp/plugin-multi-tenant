@@ -7,10 +7,10 @@ import type {
 
 import { generateCookie, mergeHeaders } from 'payload'
 
-import type { UserWithTenantsField } from '../types.js'
+import type { UserWithTenantsField } from '../types'
 
-import { getCollectionIDType } from '../utilities/getCollectionIDType.js'
-import { getTenantFromCookie } from '../utilities/getTenantFromCookie.js'
+import { getCollectionIDType } from '../utilities/getCollectionIDType'
+import { getTenantFromCookie } from '../utilities/getTenantFromCookie'
 
 type Args = {
   collection: CollectionConfig
@@ -115,7 +115,7 @@ export const afterTenantDelete =
             id: user.id,
             collection: usersSlug,
             data: {
-              tenants: (user.tenants || []).filter(({ tenant: tenantID }) => tenantID !== id),
+              skole: (user.skole || []).filter((tenantID) => tenantID !== id),
             },
           }),
         )

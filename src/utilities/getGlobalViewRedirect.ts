@@ -1,9 +1,10 @@
 import type { Payload, User, ViewTypes } from 'payload'
 
-import { SELECT_ALL } from '../constants.js'
-import { findTenantOptions } from '../queries/findTenantOptions.js'
-import { getCollectionIDType } from './getCollectionIDType.js'
-import { getTenantFromCookie } from './getTenantFromCookie.js'
+import { SELECT_ALL } from '../constants'
+import { findTenantOptions } from '../queries/findTenantOptions'
+import { getCollectionIDType } from './getCollectionIDType'
+import { getTenantFromCookie } from './getTenantFromCookie'
+import { UserWithTenantsField } from '@/types'
 
 type Args = {
   docID?: number | string
@@ -13,7 +14,7 @@ type Args = {
   tenantFieldName: string
   tenantsCollectionSlug: string
   useAsTitle: string
-  user?: User
+  user?: UserWithTenantsField
   view: ViewTypes
 }
 export async function getGlobalViewRedirect({

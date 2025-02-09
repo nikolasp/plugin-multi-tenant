@@ -128,7 +128,6 @@ export type Tenant<IDType = number | string> = {
     name: string;
 };
 export type UserWithTenantsField = {
-    tenants: {
-        tenant: number | string | Tenant;
-    }[];
+    skole: (number | string | Tenant)[];
+    role: ('superAdmin' | 'skolaAdmin')[];
 } & User;

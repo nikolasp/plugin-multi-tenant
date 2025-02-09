@@ -1,4 +1,4 @@
-import type { UserWithTenantsField } from '../types.js';
+import type { UserWithTenantsField } from '../types';
 /**
  * Returns array of all tenant IDs assigned to a user
  *

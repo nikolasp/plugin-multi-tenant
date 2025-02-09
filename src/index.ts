@@ -1,14 +1,14 @@
 import type { CollectionConfig, Config } from 'payload'
 
-import type { MultiTenantPluginConfig } from './types.js'
+import type { MultiTenantPluginConfig } from './types'
 
-import { defaults } from './defaults.js'
-import { tenantField } from './fields/tenantField/index.js'
-import { tenantsArrayField } from './fields/tenantsArrayField/index.js'
-import { addTenantCleanup } from './hooks/afterTenantDelete.js'
-import { addCollectionAccess } from './utilities/addCollectionAccess.js'
-import { addFilterOptionsToFields } from './utilities/addFilterOptionsToFields.js'
-import { withTenantListFilter } from './utilities/withTenantListFilter.js'
+import { defaults } from './defaults'
+import { tenantField } from './fields/tenantField/index'
+import { tenantsArrayField } from './fields/tenantsArrayField/index'
+import { addTenantCleanup } from './hooks/afterTenantDelete'
+import { addCollectionAccess } from './utilities/addCollectionAccess'
+import { addFilterOptionsToFields } from './utilities/addFilterOptionsToFields'
+import { withTenantListFilter } from './utilities/withTenantListFilter'
 
 export const multiTenantPlugin =
   <ConfigType>(pluginConfig: MultiTenantPluginConfig<ConfigType>) =>
@@ -89,11 +89,11 @@ export const multiTenantPlugin =
       )
     }
 
-    addCollectionAccess({
-      collection: adminUsersCollection,
-      fieldName: `${tenantsArrayFieldName}.${tenantsArrayTenantFieldName}`,
-      userHasAccessToAllTenants,
-    })
+    // addCollectionAccess({
+    //   collection: adminUsersCollection,
+    //   fieldName: `${tenantsArrayFieldName}.${tenantsArrayTenantFieldName}`,
+    //   userHasAccessToAllTenants,
+    // })
 
     let tenantCollection: CollectionConfig | undefined
 

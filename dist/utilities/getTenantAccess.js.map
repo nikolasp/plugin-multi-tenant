@@ -1,0 +1,1 @@
+{"version":3,"file":"getTenantAccess.js","sourceRoot":"","sources":["../../src/utilities/getTenantAccess.ts"],"names":[],"mappings":";;AAUA,0CAQC;AAdD,uDAAqD;AAMrD,SAAgB,eAAe,CAAC,EAAyB;;QAAvB,SAAS,eAAA,EAAE,IAAI,UAAA;IAC/C,IAAM,qBAAqB,GAAG,IAAA,mCAAgB,EAAC,IAAI,CAAC,CAAA;IAEpD;QACE,GAAC,SAAS,IAAG;YACX,EAAE,EAAE,qBAAqB,IAAI,EAAE;SAChC;WACF;AACH,CAAC"}
